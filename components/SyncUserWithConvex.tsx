@@ -28,4 +28,5 @@ export default function SyncUserWithConvex() {
   }, [user, updateUser]);
 
   return null;
+
 }
