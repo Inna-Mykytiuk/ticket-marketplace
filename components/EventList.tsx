@@ -3,6 +3,8 @@
 import { useQuery } from "convex/react"
 import { api } from "@/convex/_generated/api"
 import Spinner from "./Spinner";
+import { CalendarDays } from "lucide-react";
+import EventCard from "./EventCard";
 
 function EventList() {
   const events = useQuery(api.events.get);
@@ -36,7 +38,7 @@ function EventList() {
         </div>
         <div className="bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-100">
           <div className="flex items-center gap-2 text-gray-600">
-            {/* <CalendarDays className="w-5 h-5" /> */}
+            <CalendarDays className="w-5 h-5" />
             <span className="font-medium">
               {upcomingEvents.length} Upcoming Events
             </span>
@@ -47,9 +49,9 @@ function EventList() {
       {/* Upcoming Events Grid */}
       {upcomingEvents.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {/* {upcomingEvents.map((event) => (
+          {upcomingEvents.map((event) => (
             <EventCard key={event._id} eventId={event._id} />
-          ))} */}
+          ))}
         </div>
       ) : (
         <div className="bg-gray-50 rounded-lg p-12 text-center mb-12">
@@ -66,9 +68,9 @@ function EventList() {
         <>
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Past Events</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* {pastEvents.map((event) => (
+            {pastEvents.map((event) => (
               <EventCard key={event._id} eventId={event._id} />
-            ))} */}
+            ))}
           </div>
         </>
       )}
