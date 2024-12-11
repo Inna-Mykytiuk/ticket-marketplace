@@ -12,6 +12,8 @@
     "@clerk/clerk-react": "^5.17.1",
     "@clerk/nextjs": "^6.5.1",
     "@convex-dev/rate-limiter": "^0.2.4",
+    "@hookform/resolvers": "^3.9.1",
+    "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-toast": "^1.2.2",
     "class-variance-authority": "^0.7.1",
@@ -21,10 +23,12 @@
     "next": "15.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.54.0",
     "react-qr-code": "^2.0.15",
     "stripe": "^13.4.0",
     "tailwind-merge": "^2.5.5",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^20",
