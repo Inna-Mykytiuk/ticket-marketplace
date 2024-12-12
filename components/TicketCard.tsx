@@ -39,9 +39,8 @@ export default function TicketCard({ ticketId }: { ticketId: Id<"tickets"> }) {
   return (
     <Link
       href={`/tickets/${ticketId}`}
-      className={`block bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 border ${
-        ticket.event.is_cancelled ? "border-red-200" : "border-gray-100"
-      } overflow-hidden ${isPastEvent ? "opacity-75 hover:opacity-100" : ""}`}
+      className={`block bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 border ${ticket.event.is_cancelled ? "border-red-200" : "border-gray-100"
+        } overflow-hidden ${isPastEvent ? "opacity-75 hover:opacity-100" : ""}`}
     >
       <div className="p-5">
         <div className="flex justify-between items-start mb-4">
@@ -61,11 +60,10 @@ export default function TicketCard({ ticketId }: { ticketId: Id<"tickets"> }) {
           </div>
           <div className="flex flex-col items-end gap-2">
             <span
-              className={`px-3 py-1 rounded-full text-sm font-medium ${
-                ticket.event.is_cancelled
+              className={`px-3 py-1 rounded-full text-sm font-medium ${ticket.event.is_cancelled
                   ? "bg-red-50 text-red-700 border-red-100"
                   : statusColors[ticket.status]
-              }`}
+                }`}
             >
               {ticket.event.is_cancelled
                 ? "Cancelled"
@@ -99,15 +97,14 @@ export default function TicketCard({ ticketId }: { ticketId: Id<"tickets"> }) {
 
         <div className="mt-4 flex items-center justify-between text-sm">
           <span
-            className={`font-medium ${
-              ticket.event.is_cancelled
+            className={`font-medium ${ticket.event.is_cancelled
                 ? "text-red-600"
                 : isPastEvent
                   ? "text-gray-600"
                   : "text-blue-600"
-            }`}
+              }`}
           >
-            £{ticket.event.price.toFixed(2)}
+            ${ticket.event.price.toFixed(2)}
           </span>
           <span className="text-gray-600 flex items-center">
             View Ticket <ArrowRight className="w-4 h-4 ml-1" />
